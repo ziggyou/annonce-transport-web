@@ -6,6 +6,7 @@ import { AjouterAnnonceComponent } from './ajouter-annonce/ajouter-annonce.compo
 import { DetailsAnnonceComponent } from './details-annonce/details-annonce.component';
 import {routing} from "./app.routing";
 import { LoginComponent } from './login/login.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     routing
   ],
   providers: [],
