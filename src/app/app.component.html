@@ -37,7 +37,6 @@
             <nav id="horizontal-nav" class="white hide-on-med-and-down">
                 <div class="nav-wrapper">                  
                   <ul id="nav-mobile" class="left hide-on-med-and-down" style="margin-left:200px;">
-<<<<<<< HEAD
                     <li>
                         <a href="app-widget.html" class="cyan-text">
                             <i class="mdi-action-perm-phone-msg"></i>
@@ -64,9 +63,8 @@
                             <span>Ajout Annonces</span>
                         </a>
                     </li>  -->   
-                    <li>
-                        <a href="#modal2" class="cyan-text modal-trigger" >
-=======
+                    <!-- <li>
+                        <a href="#modal2" class="cyan-text modal-trigger" > -->
                     <li>
                         <a href="app-widget.html" class="cyan-text">
                             <i class="mdi-action-perm-phone-msg"></i>
@@ -87,9 +85,10 @@
                             <span>Gerer Annonces</span>
                         </a>
                     </li>
+
                     <li>
-                        <a href="app-email.html" class="cyan-text">
->>>>>>> 86ea320d915ae45f0d53773f62e90b32a3146873
+                        <a href="#modal2" class="cyan-text modal-trigger">
+
                             <i class="mdi-content-add-box medium"></i>
                             <span>Ajout Annonces</span>
                         </a>
@@ -109,11 +108,7 @@
             </nav>
 
                 <!-- CSSdropdown -->
-<<<<<<< HEAD
 
-=======
->>>>>>> 86ea320d915ae45f0d53773f62e90b32a3146873
- 
 
         </div>
         <!-- end header nav-->
@@ -283,28 +278,32 @@
     </div>
     <!-- END MAIN -->
 
+    
+
     <!-- Pop up CONNEXION -->
     <div id="modal2" class="modal" >
     <div class="col s12 z-depth-4 card-panel">
-      <form class="login-form">
+      <div class="login-form">
         <div class="row">
           <div class="input-field col s12 center">
             <img src="login-logo.png" alt="" class="circle responsive-img valign profile-image-login">
-            <p class="center login-form-text">Material Design Admin Template</p>
+            <p class="center login-form-text">!!! Veuillez vous connecter </p>
           </div>
         </div>
-        <div class="row margin">
+        <div class="center row margin">
           <div class="input-field col s12">
             <i class="mdi-social-person-outline prefix"></i>
-            <input id="username" type="text" ><!-- {{username}}[(ngModel)]="username" -->
+            <input id="username" type="text" [(ngModel)]="username"><!-- {{username}}[(ngModel)]="username" -->
             <label for="username" class="center-align">Username</label>
+            <p>{{username}}</p>
           </div>
         </div>
         <div class="row margin">
           <div class="input-field col s12">
             <i class="mdi-action-lock-outline prefix"></i>
-            <input id="password" type="password" >
+            <input id="password" type="password" [(ngModel)]="password">
             <label for="password">Password</label>
+            <p>{{password}}</p>
           </div>
         </div>
         <div class="row">          
@@ -327,7 +326,7 @@
           </div>          
         </div>
 
-          </form>
+          </div>
         </div>
     </div>
     <!-- ================================================
