@@ -7,6 +7,7 @@ import { DetailsAnnonceComponent } from './details-annonce/details-annonce.compo
 import {routing} from "./app.routing";
 import { LoginComponent } from './login/login.component';
 import {FormsModule} from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {FormsModule} from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
-    routing
+    routing,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

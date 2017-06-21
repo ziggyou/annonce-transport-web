@@ -293,7 +293,7 @@
         <div class="center row margin">
           <div class="input-field col s12">
             <i class="mdi-social-person-outline prefix"></i>
-            <input id="username" type="text" [(ngModel)]="username"><!-- {{username}}[(ngModel)]="username" -->
+            <input id="username" type="text" [(ngModel)]="user.username"><!-- {{username}}[(ngModel)]="username" -->
             <label for="username" class="center-align">Username</label>
             <p>{{username}}</p>
           </div>
@@ -301,7 +301,7 @@
         <div class="row margin">
           <div class="input-field col s12">
             <i class="mdi-action-lock-outline prefix"></i>
-            <input id="password" type="password" [(ngModel)]="password">
+            <input id="password" type="password" [(ngModel)]="user.password">
             <label for="password">Password</label>
             <p>{{password}}</p>
           </div>
@@ -314,7 +314,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <a href="index.html" class="btn waves-effect waves-light col s12">Login</a>
+            <a (click) = "login();" class="btn waves-effect waves-light col s12">Login</a>
           </div>
         </div>
         <div class="row">
