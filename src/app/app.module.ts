@@ -8,6 +8,7 @@ import {routing} from "./app.routing";
 import { LoginComponent } from './login/login.component';
 import {FormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import {ToasterModule} from 'angular2-toaster';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpModule } from '@angular/http';
     BrowserModule,
     FormsModule,
     routing,
-    HttpModule
+    HttpModule,
+    ToasterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

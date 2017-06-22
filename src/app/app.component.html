@@ -1,4 +1,6 @@
 <div>
+    <toaster-container></toaster-container>
+    <button (click)= "test();">testT</button>
     <!-- Start Page Loading -->
     <div id="loader-wrapper">
         <div id="loader"></div>        
@@ -286,7 +288,7 @@
       <div class="login-form">
         <div class="row">
           <div class="input-field col s12 center">
-            <img src="login-logo.png" alt="" class="circle responsive-img valign profile-image-login">
+            <img src="loginlogo.png" alt="" class="circle responsive-img valign profile-image-login">
             <p class="center login-form-text">!!! Veuillez vous connecter </p>
           </div>
         </div>
@@ -295,7 +297,7 @@
             <i class="mdi-social-person-outline prefix"></i>
             <input id="username" type="text" [(ngModel)]="user.username"><!-- {{username}}[(ngModel)]="username" -->
             <label for="username" class="center-align">Username</label>
-            <p>{{username}}</p>
+            <!-- <p>{{username}}</p> -->
           </div>
         </div>
         <div class="row margin">
@@ -303,7 +305,7 @@
             <i class="mdi-action-lock-outline prefix"></i>
             <input id="password" type="password" [(ngModel)]="user.password">
             <label for="password">Password</label>
-            <p>{{password}}</p>
+            <!-- <p>{{password}}</p> -->
           </div>
         </div>
         <div class="row">          
@@ -319,12 +321,121 @@
         </div>
         <div class="row">
           <div class="input-field col s6 m6 l6">
-            <p class="margin medium-small"><a href="page-register.html">Register Now!</a></p>
+            <p class="margin medium-small"><a href="#modal3" class="cyan-text modal-trigger">S'inscrire maintenant!</a></p>
           </div>
-          <div class="input-field col s6 m6 l6">
+          <!-- <div class="input-field col s6 m6 l6">
               <p class="margin right-align medium-small"><a href="page-forgot-password.html">Forgot password ?</a></p>
+          </div>    -->       
+        </div>
+
+          </div>
+        </div>
+    </div>
+     <!-- Pop up REGISTRATION -->
+    <div id="modal3" class="modal" >
+    <div class="col s12 z-depth-4 card-panel">
+      <div class="login-form">
+        <div class="row">
+          <div class="input-field col s12 center">
+            <!-- <img src="login-logo.png" alt="" class="circle responsive-img valign profile-image-login"> -->
+            <p class="center login-form-text">!!! Veuillez renseigner ces informations </p>
+          </div>
+        </div>
+        <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="nom" type="text" [(ngModel)]="user.nom">
+            <label for="nom" class="center-align">Nom</label>
+            <p>{{user.nom}}</p>
           </div>          
         </div>
+        <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="prenom" type="text" [(ngModel)]="user.prenom">
+            <label for="Prenom" class="center-align">Prenom</label>
+            
+          </div>
+        </div>
+         <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="Téléphone" type="text" [(ngModel)]="user.telephone">
+            <label for="Téléphone" class="center-align">Téléphone</label>
+            <p>{{user.telephone}}</p>
+          </div>
+        </div>
+         <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="adresse" type="text" [(ngModel)]="user.adresse">
+            <label for="Adresse" class="center-align">Adresse</label>
+            <p>{{user.adresse}}</p>
+          </div>
+        </div>
+         <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="E-mail" type="text" [(ngModel)]="user.email">
+            <label for="E-mail" class="center-align">E-mail</label>
+            <p>{{user.email}}</p>
+          </div>
+        </div>
+         <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="facebook" type="text" [(ngModel)]="user.facebook">
+            <label for="facebook" class="center-align">facebook</label>
+            <p>{{user.facebook}}</p>
+          </div>
+        </div>
+        <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="instagram" type="text" [(ngModel)]="user.instagram">
+            <label for="instagram" class="center-align">instagram</label>
+            <p>{{user.instagram}}</p>
+          </div>
+        </div>
+        <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="instagram" type="text" [(ngModel)]="user.snap">
+            <label for="instagram" class="center-align">snap</label>
+            <p>{{user.snap}}</p>
+          </div>
+        </div>
+        <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="twiter" type="text" [(ngModel)]="user1.twiter">
+            <label for="twiter" class="center-align">twiter</label>
+            <p>{{user.twiter}}</p>
+          </div>
+        </div>
+         <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="username" type="text" [(ngModel)]="user.username">
+            <label for="username" class="center-align">username</label>
+            <p>{{user.username}}</p>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-action-lock-outline prefix"></i>
+            <input id="password" type="password" [(ngModel)]="user.password">
+            <label for="password">Password</label>
+            <p>{{user.password}}</p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="input-field col s12">
+            <a (click) = "register();" class="btn waves-effect waves-light col s12">S'inscrire</a>
+          </div>
+        </div>
+        
 
           </div>
         </div>
