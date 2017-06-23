@@ -5,17 +5,25 @@ import { ConsulterAnnonceComponent } from './consulter-annonce/consulter-annonce
 import { AjouterAnnonceComponent } from './ajouter-annonce/ajouter-annonce.component';
 import { DetailsAnnonceComponent } from './details-annonce/details-annonce.component';
 import {routing} from "./app.routing";
+import { LoginComponent } from './login/login.component';
+import {FormsModule} from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import {ToasterModule} from 'angular2-toaster';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConsulterAnnonceComponent,
     AjouterAnnonceComponent,
-    DetailsAnnonceComponent
+    DetailsAnnonceComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    routing
+    FormsModule,
+    routing,
+    HttpModule,
+    ToasterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

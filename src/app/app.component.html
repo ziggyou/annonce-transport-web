@@ -1,4 +1,6 @@
 <div>
+    <toaster-container></toaster-container>
+    <button (click)= "test();">testT</button>
     <!-- Start Page Loading -->
     <div id="loader-wrapper">
         <div id="loader"></div>        
@@ -57,8 +59,38 @@
                             <span>Gerer Annonces</span>
                         </a>
                     </li>
+                  <!--   <li>
+                        <a href="../login/login.component.html" class="cyan-text modal-trigger" data-target="modal2">
+                            <i class="mdi-content-add-box medium"></i>
+                            <span>Ajout Annonces</span>
+                        </a>
+                    </li>  -->   
+                    <!-- <li>
+                        <a href="#modal2" class="cyan-text modal-trigger" > -->
                     <li>
-                        <a href="app-email.html" class="cyan-text">
+                        <a href="app-widget.html" class="cyan-text">
+                            <i class="mdi-action-perm-phone-msg"></i>
+                            <span>Nous Contactez</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="app-widget.html" class="cyan-text">
+                            <i class="mdi-maps-local-grocery-store"></i>
+                            <span>Favoris</span>
+                        </a>
+                    </li> 
+
+                    <li>
+                        <a href="index.html" class="waves-effect waves-block waves-light cyan-text">
+                            <i class="mdi-action-perm-data-setting"></i>
+                            <span>Gerer Annonces</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#modal2" class="cyan-text modal-trigger">
+
                             <i class="mdi-content-add-box medium"></i>
                             <span>Ajout Annonces</span>
                         </a>
@@ -78,7 +110,7 @@
             </nav>
 
                 <!-- CSSdropdown -->
- 
+
 
         </div>
         <!-- end header nav-->
@@ -248,6 +280,182 @@
     </div>
     <!-- END MAIN -->
 
+    
+
+    <!-- Pop up CONNEXION -->
+    <div id="modal2" class="modal" >
+    <div class="col s12 z-depth-4 card-panel">
+      <div class="login-form">
+        <div class="row">
+          <div class="input-field col s12 center">
+            <img src="loginlogo.png" alt="" class="circle responsive-img valign profile-image-login">
+            <p class="center login-form-text">!!! Veuillez vous connecter </p>
+          </div>
+        </div>
+        <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="username" type="text" [(ngModel)]="user.username"><!-- {{username}}[(ngModel)]="username" -->
+            <label for="username" class="center-align">Username</label>
+            <!-- <p>{{username}}</p> -->
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-action-lock-outline prefix"></i>
+            <input id="password" type="password" [(ngModel)]="user.password">
+            <label for="password">Password</label>
+            <!-- <p>{{password}}</p> -->
+          </div>
+        </div>
+        <div class="row">          
+          <div class="input-field col s12 m12 l12  login-text">
+              <input type="checkbox" id="remember-me" />
+              <label for="remember-me">Remember me</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <a (click) = "login();" class="btn waves-effect waves-light col s12">Login</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6 m6 l6">
+            <p class="margin medium-small"><a href="#modal3" class="cyan-text modal-trigger">S'inscrire maintenant!</a></p>
+          </div>
+          <!-- <div class="input-field col s6 m6 l6">
+              <p class="margin right-align medium-small"><a href="page-forgot-password.html">Forgot password ?</a></p>
+          </div>    -->       
+        </div>
+
+          </div>
+        </div>
+    </div>
+     <!-- Pop up REGISTRATION -->
+    <div id="modal3" class="modal" >
+    <div class="col s12 z-depth-4 card-panel">
+      <div class="login-form">
+        <div class="row">
+          <div class="input-field col s12 center">
+            <!-- <img src="login-logo.png" alt="" class="circle responsive-img valign profile-image-login"> -->
+            <p class="center login-form-text">!!! Veuillez renseigner ces informations </p>
+          </div>
+        </div>
+        <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="nom" type="text" [(ngModel)]="user.nom">
+            <label for="nom" class="center-align">Nom</label>
+            <p>{{user.nom}}</p>
+          </div>          
+        </div>
+        <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="prenom" type="text" [(ngModel)]="user.prenom">
+            <label for="Prenom" class="center-align">Prenom</label>
+            
+          </div>
+        </div>
+         <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="Téléphone" type="text" [(ngModel)]="user.telephone">
+            <label for="Téléphone" class="center-align">Téléphone</label>
+            <p>{{user.telephone}}</p>
+          </div>
+        </div>
+         <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="adresse" type="text" [(ngModel)]="user.adresse">
+            <label for="Adresse" class="center-align">Adresse</label>
+            <p>{{user.adresse}}</p>
+          </div>
+        </div>
+         <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="E-mail" type="text" [(ngModel)]="user.email">
+            <label for="E-mail" class="center-align">E-mail</label>
+            <p>{{user.email}}</p>
+          </div>
+        </div>
+         <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="facebook" type="text" [(ngModel)]="user.facebook">
+            <label for="facebook" class="center-align">facebook</label>
+            <p>{{user.facebook}}</p>
+          </div>
+        </div>
+        <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="instagram" type="text" [(ngModel)]="user.instagram">
+            <label for="instagram" class="center-align">instagram</label>
+            <p>{{user.instagram}}</p>
+          </div>
+        </div>
+        <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="instagram" type="text" [(ngModel)]="user.snap">
+            <label for="instagram" class="center-align">snap</label>
+            <p>{{user.snap}}</p>
+          </div>
+        </div>
+        <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="twiter" type="text" [(ngModel)]="user1.twiter">
+            <label for="twiter" class="center-align">twiter</label>
+            <p>{{user.twiter}}</p>
+          </div>
+        </div>
+         <div class="center row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="username" type="text" [(ngModel)]="user.username">
+            <label for="username" class="center-align">username</label>
+            <p>{{user.username}}</p>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-action-lock-outline prefix"></i>
+            <input id="password" type="password" [(ngModel)]="user.password">
+            <label for="password">Password</label>
+            <p>{{user.password}}</p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="input-field col s12">
+            <a (click) = "register();" class="btn waves-effect waves-light col s12">S'inscrire</a>
+          </div>
+        </div>
+        
+
+          </div>
+        </div>
+    </div>
+    <!-- ================================================
+    Scripts
+    ================================================ -->
+
+  <!-- jQuery Library -->
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <!--materialize js-->
+  <script type="text/javascript" src="js/materialize.js"></script>
+  <!--prism-->
+  <script type="text/javascript" src="js/prism.js"></script>
+  <!--scrollbar-->
+  <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+  <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+  <script type="text/javascript" src="js/plugins.js"></script>
+    <!-- Pop up CONNEXION -->
 
 
     <!-- //////////////////////////////////////////////////////////////////////////// -->
@@ -276,6 +484,8 @@
                 <span class="right"> Design and Developed by <a class="grey-text text-lighten-4" href="http://geekslabs.com/">GeeksLabs</a></span>
             </div>
         </div>
+
+
     </footer>
     <!-- END FOOTER -->
 
