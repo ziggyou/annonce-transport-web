@@ -26,7 +26,7 @@
                         </li>
                         <li><a href="#" data-activates="chat-out" class="waves-effect waves-block waves-light chat-collapse"><i class="mdi-communication-chat"></i></a>
                         </li>
-                        <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light"><i class="mdi-action-account-circle"></i></a>
+                        <li><a href="#modal2" class="waves-effect waves-block waves-light modal-trigger"><i class="mdi-action-account-circle"></i></a>
                         </li>
                         <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a>
                         </li>
@@ -37,27 +37,7 @@
             <!-- HORIZONTL NAV START-->
             <nav id="horizontal-nav" class="white hide-on-med-and-down">
                 <div class="nav-wrapper">
-                  <ul id="nav-mobile" class="left hide-on-med-and-down" style="margin-left:200px;">
-                    <li>
-                        <a href="app-widget.html" class="cyan-text">
-                            <i class="mdi-action-perm-phone-msg"></i>
-                            <span>Nous Contactez</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="app-widget.html" class="cyan-text">
-                            <i class="mdi-maps-local-grocery-store"></i>
-                            <span>Favoris</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a (click)="gerrerAnnonce();" class="waves-effect waves-block waves-light cyan-text">
-                            <i class="mdi-action-perm-data-setting"></i>
-                            <span>Gerer Annonces</span>
-                        </a>
-                    </li>
+                  <ul id="nav-mobile" class="left hide-on-med-and-down" style="margin-left:250px;">
                   <!--   <li>
                         <a href="../login/login.component.html" class="cyan-text modal-trigger" data-target="modal2">
                             <i class="mdi-content-add-box medium"></i>
@@ -67,28 +47,28 @@
                     <!-- <li>
                         <a href="#modal2" class="cyan-text modal-trigger" > -->
                     <li>
-                        <a (click)="gerrerAnnonce();" class="cyan-text">
+                        <a  class="cyan-text">
                             <i class="mdi-action-perm-phone-msg"></i>
                             <span>Nous Contactez</span>
                         </a>
                     </li>
 
                     <li>
-                        <a (click)="gerrerAnnonce();" class="cyan-text">
+                      <a  class="cyan-text">
                             <i class="mdi-maps-local-grocery-store"></i>
                             <span>Favoris</span>
                         </a>
                     </li>
 
                     <li>
-                        <a (click)="gerrerAnnonce();" class="waves-effect waves-block waves-light cyan-text">
+                        <a routerLink="annonce/details" class="waves-effect waves-block waves-light cyan-text">
                             <i class="mdi-action-perm-data-setting"></i>
                             <span>Gerer Annonces</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="#modal2" class="cyan-text modal-trigger">
+                        <a routerLink="annonce/ajouter" class="cyan-text ">
 
                             <i class="mdi-content-add-box medium"></i>
                             <span>Ajout Annonces</span>
@@ -96,7 +76,7 @@
                     </li>
 
                     <li>
-                        <a (click)="gerrerAnnonce();" class="cyan-text">
+                        <a routerLink="/" class="cyan-text">
                             <i class="mdi-action-home medium"></i>
                             <span>Accueil</span>
                         </a>
@@ -462,20 +442,7 @@
     <!-- START FOOTER -->
     <footer class="page-footer">
         <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">World Market</h5>
-                    <p class="grey-text text-lighten-4">World map, world regions, countries and cities.</p>
-                    <div id="world-map-markers"></div>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Sales by Country</h5>
-                    <p class="grey-text text-lighten-4">A sample polar chart to show sales by country.</p>
-                    <div id="polar-chart-holder">
-                        <canvas id="polar-chart-country" width="200"></canvas>
-                    </div>
-                </div>
-            </div>
+
         </div>
         <div class="footer-copyright">
             <div class="container">
@@ -483,7 +450,6 @@
                 <span class="right"> Design and Developed by <a class="grey-text text-lighten-4" href="http://geekslabs.com/">GeeksLabs</a></span>
             </div>
         </div>
-
 
     </footer>
     <!-- END FOOTER -->

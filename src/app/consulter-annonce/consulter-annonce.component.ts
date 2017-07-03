@@ -1,15 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import {ConsulterAnnonceService} from "./consulter-annonce.service";
 
 @Component({
   selector: 'app-consulter-annonce',
   templateUrl: './consulter-annonce.component.html',
-  styleUrls: ['./consulter-annonce.component.css']
+  styleUrls: ['./consulter-annonce.component.css'],
+  providers : [ConsulterAnnonceService]
 })
 export class ConsulterAnnonceComponent implements OnInit {
 
-  constructor() { }
+  annonces;
+  constructor(private consulterAnnonceService : ConsulterAnnonceService) { }
 
   ngOnInit() {
+    this.consulterAnnonceService.getAnnonces()
+      .subscribe(
+        data => this.handleAnnonces(data)
+      );
+  }
+
+  handleAnnonces(data){
+    console.log(data)
+    this.annonces = data;
   }
 
 }

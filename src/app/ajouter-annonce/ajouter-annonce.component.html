@@ -1,3 +1,229 @@
-<p>
-  ajouter-annonce works woyayoyyyyyy!
-</p>
+<div id="page_content">
+        <div id="page_heading">
+            <h1 id="product_edit_name">Ajouter une annonce </h1>
+        </div>
+        <div id="page_content_inner">
+            <form action="" class="uk-form-stacked" id="product_edit_form">
+                <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
+                    <div class="uk-width-xLarge-2-10 uk-width-large-3-10">
+                        <div class="md-card ">
+                            <div class="md-card-content">
+                                <div class="switch">
+                                    <label>
+                                    <input type="checkbox">
+                                    <span class="lever cyan"></span>
+                                    Active
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md-card hoverable">
+                            <div class="md-card-toolbar">
+                                <div class="md-card-toolbar-actions">
+                                    <i class="mdi-content-add-box"></i>
+                                </div>
+                                <h2 class="md-card-toolbar-heading-text cyan-text">
+                                    Photos
+                                </h2>
+                            </div>
+                            <div class="md-card-content">
+                                
+                                <div class="file-field input-field col s12">
+                                 
+                                <div class="file-path-wrapper col 10">
+                                    <input class="file-path validate" type="text">
+                                </div>
+                                <div class="btn-floating addmedia light-blue lighten-1 col s2">
+                                    <i class="mdi-image-camera-alt"></i> 
+                                    <input type="file" multiple>
+                                </div>
+      
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-xLarge-8-10  uk-width-large-7-10">
+                        <div class="md-card hoverable">
+                            <div class="md-card-toolbar">
+                                <h2 class="md-card-toolbar-heading-text cyan-text">
+                                    Details
+                                </h2>
+                            </div>
+                            <div class="md-card-content large-padding">
+                                <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
+                                    <div class="uk-width-large-1-2">
+                                        <div class="uk-form-row">
+                                            <label for="product_edit_name_control">Product Name</label>
+                                            <input type="text" class="md-input"/>
+                                        </div>
+                                        <div class="uk-form-row">
+                                    <div class="uk-input-group">
+                                        <label for="product_edit_price_control ">Prix</label>
+                                        <input type="number" class="md-input"  />
+                                    </div>
+                                </div>
+                                <div class="uk-form-row">
+                                    <div class="uk-input-group">
+                                        <label for="product_edit_quantity_control">Quantite</label>
+                                        <input type="number" class="md-input"  />
+                                    </div>
+                                </div>
+                                        
+                                    </div>
+                                    <div class="uk-width-large-1-2">
+                                        
+                                        <div class="input-field col s10">
+                                            <textarea id="textarea" row="4" class="materialize-textarea"></textarea>
+                                            <label for="textarea" class="">Description</label>
+                                        </div>
+                                        <div class="input-field col S12" >
+                                            <select  multiple>
+                                                <option value="Vente" selected>Vente</option>
+                                                <option value="Location" >Location</option>
+                                                <option value="Transport_en_commun" >Transport en commun</option>
+                                                
+                                            </select>
+                                              <label>Categorie</label>
+                                        </div>
+                                        <br>
+                                        <div class="input-field col S12">
+                                            <select data-md-selectize>
+                                                <option value="unknow" selected="">unknow</option>
+                                                <option value="white">White</option>
+                                                <option value="black">Black</option>
+                                                <option value="red">Red</option>
+                                                <option value="green">green</option>
+                                                <option value="yellow">yellow</option>
+                                                <option value="blue">blue</option>
+                                                <option value="orange">orange</option>
+                                            </select>
+                                              <label>Color</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>  
+
+
+    <div class="md-fab-wrapper">
+        <a class="md-fab md-fab-primary cyan" href="#" id="product_edit_submit">
+            <i class="mdi-content-save"></i>
+        </a>
+    </div>
+
+        <script>
+        $(function() {
+            var $switcher = $('#style_switcher'),
+                $switcher_toggle = $('#style_switcher_toggle'),
+                $theme_switcher = $('#theme_switcher'),
+                $mini_sidebar_toggle = $('#style_sidebar_mini'),
+                $boxed_layout_toggle = $('#style_layout_boxed'),
+                $accordion_mode_toggle = $('#accordion_mode_main_menu'),
+                $body = $('body');
+
+
+            $switcher_toggle.click(function(e) {
+                e.preventDefault();
+                $switcher.toggleClass('switcher_active');
+            });
+
+            $theme_switcher.children('li').click(function(e) {
+                e.preventDefault();
+                var $this = $(this),
+                    this_theme = $this.attr('data-app-theme');
+
+                $theme_switcher.children('li').removeClass('active_theme');
+                $(this).addClass('active_theme');
+                $body
+                    .removeClass('app_theme_a app_theme_b app_theme_c app_theme_d app_theme_e app_theme_f app_theme_g app_theme_h app_theme_i')
+                    .addClass(this_theme);
+
+                if(this_theme == '') {
+                    localStorage.removeItem('altair_theme');
+                } else {
+                    localStorage.setItem("altair_theme", this_theme);
+                }
+
+            });
+
+            // hide style switcher
+            $document.on('click keyup', function(e) {
+                if( $switcher.hasClass('switcher_active') ) {
+                    if (
+                        ( !$(e.target).closest($switcher).length )
+                        || ( e.keyCode == 27 )
+                    ) {
+                        $switcher.removeClass('switcher_active');
+                    }
+                }
+            });
+
+            // get theme from local storage
+            if(localStorage.getItem("altair_theme") !== null) {
+                $theme_switcher.children('li[data-app-theme='+localStorage.getItem("altair_theme")+']').click();
+            }
+
+
+        // toggle mini sidebar
+
+            // change input's state to checked if mini sidebar is active
+            if((localStorage.getItem("altair_sidebar_mini") !== null && localStorage.getItem("altair_sidebar_mini") == '1') || $body.hasClass('sidebar_mini')) {
+                $mini_sidebar_toggle.iCheck('check');
+            }
+
+            $mini_sidebar_toggle
+                .on('ifChecked', function(event){
+                    $switcher.removeClass('switcher_active');
+                    localStorage.setItem("altair_sidebar_mini", '1');
+                    location.reload(true);
+                })
+                .on('ifUnchecked', function(event){
+                    $switcher.removeClass('switcher_active');
+                    localStorage.removeItem('altair_sidebar_mini');
+                    location.reload(true);
+                });
+
+
+        // toggle boxed layout
+
+            if((localStorage.getItem("altair_layout") !== null && localStorage.getItem("altair_layout") == 'boxed') || $body.hasClass('boxed_layout')) {
+                $boxed_layout_toggle.iCheck('check');
+                $body.addClass('boxed_layout');
+                $(window).resize();
+            }
+
+            $boxed_layout_toggle
+                .on('ifChecked', function(event){
+                    $switcher.removeClass('switcher_active');
+                    localStorage.setItem("altair_layout", 'boxed');
+                    location.reload(true);
+                })
+                .on('ifUnchecked', function(event){
+                    $switcher.removeClass('switcher_active');
+                    localStorage.removeItem('altair_layout');
+                    location.reload(true);
+                });
+
+        // main menu accordion mode
+            if($sidebar_main.hasClass('accordion_mode')) {
+                $accordion_mode_toggle.iCheck('check');
+            }
+
+            $accordion_mode_toggle
+                .on('ifChecked', function(){
+                    $sidebar_main.addClass('accordion_mode');
+                })
+                .on('ifUnchecked', function(){
+                    $sidebar_main.removeClass('accordion_mode');
+                });
+
+
+        });
+    </script>  
