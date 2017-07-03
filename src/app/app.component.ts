@@ -17,7 +17,7 @@ export class AppComponent {
   user = {
   	username : "" ,
   	password: ""
-  } 
+  }
 
   user1 = {
   	nom : "" ,
@@ -30,29 +30,29 @@ export class AppComponent {
   	snap : "",
   	linkedin: "",
   	twiter: "",
-  	username : "",  	
+  	username : "",
   	password: ""
-  } 
+  }
 
   constructor(private httpService : HttpService, private router: Router, private toasterService: ToasterService){
   	this.toasterService = toasterService;
   }
 
   login(){ console.log(this.user)
-  	
+
   	this.httpService.connexion(this.user)
   		.subscribe(
   			data=>this.handleLogin(data)
   			)
   }
-  
+
   handleLogin(data){
   	if (data) {
   		this.router.navigate(["annonce/ajouter"])
 
   	}else
-  	{	
-  		
+  	{
+
   	}
 
 
@@ -64,7 +64,7 @@ export class AppComponent {
 
 
   register(){ console.log(this.user)
-  	
+
   	this.httpService.inscription(this.user)
   		.subscribe(
   			data=>this.handleInscrip(data)
@@ -76,8 +76,13 @@ export class AppComponent {
   		this.router.navigate(["annonce/ajouter"])
       this.idPoP1='rien'
   	}else
-  	{	
-  		
+  	{
+
   	}
 	}
+
+  gerrerAnnonce()
+  {
+    this.router.navigate(["/"])
+  }
 }

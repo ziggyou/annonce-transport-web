@@ -2,7 +2,7 @@
     <toaster-container></toaster-container>
     <!-- Start Page Loading -->
     <div id="loader-wrapper">
-        <div id="loader"></div>        
+        <div id="loader"></div>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
     </div>
@@ -15,15 +15,15 @@
         <!-- start header nav-->
         <div class="navbar-fixed">
             <nav class="cyan">
-                <div class="nav-wrapper">                    
-                    
+                <div class="nav-wrapper">
+
                     <div class=" header-search-wrapper hide-on-med-and-down" style="margin-left:100px;">
                         <i class="mdi-action-search"></i>
                         <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="...Rechercher une annonce"/>
                     </div>
-                    <ul class="left hide-on-med-and-down" >                                        
+                    <ul class="left hide-on-med-and-down" >
                         <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light"><i class="mdi-social-notifications"></i></a>
-                        </li>                        
+                        </li>
                         <li><a href="#" data-activates="chat-out" class="waves-effect waves-block waves-light chat-collapse"><i class="mdi-communication-chat"></i></a>
                         </li>
                         <li><a href="#modal2" class="waves-effect waves-block waves-light modal-trigger"><i class="mdi-action-account-circle"></i></a>
@@ -36,14 +36,14 @@
 
             <!-- HORIZONTL NAV START-->
             <nav id="horizontal-nav" class="white hide-on-med-and-down">
-                <div class="nav-wrapper">                  
+                <div class="nav-wrapper">
                   <ul id="nav-mobile" class="left hide-on-med-and-down" style="margin-left:250px;">
                   <!--   <li>
                         <a href="../login/login.component.html" class="cyan-text modal-trigger" data-target="modal2">
                             <i class="mdi-content-add-box medium"></i>
                             <span>Ajout Annonces</span>
                         </a>
-                    </li>  -->   
+                    </li>  -->
                     <!-- <li>
                         <a href="#modal2" class="cyan-text modal-trigger" > -->
                     <li>
@@ -54,26 +54,26 @@
                     </li>
 
                     <li>
-                        <a  class="cyan-text">
+                      <a  class="cyan-text">
                             <i class="mdi-maps-local-grocery-store"></i>
                             <span>Favoris</span>
                         </a>
-                    </li> 
+                    </li>
 
                     <li>
-                        <a  class="waves-effect waves-block waves-light cyan-text">
+                        <a routerLink="annonce/details" class="waves-effect waves-block waves-light cyan-text">
                             <i class="mdi-action-perm-data-setting"></i>
                             <span>Gerer Annonces</span>
                         </a>
                     </li>
 
                     <li>
-                        <a routerLink="/annonce/ajouter" class="cyan-text ">
+                        <a routerLink="annonce/ajouter" class="cyan-text ">
 
                             <i class="mdi-content-add-box medium"></i>
                             <span>Ajout Annonces</span>
                         </a>
-                    </li>                    
+                    </li>
 
                     <li>
                         <a routerLink="/" class="cyan-text">
@@ -83,7 +83,7 @@
                     </li>
 
 
-                    
+
                   </ul>
                 </div>
             </nav>
@@ -259,7 +259,7 @@
     </div>
     <!-- END MAIN -->
 
-    
+
 
     <!-- Pop up CONNEXION -->
     <div id="modal2" class="modal" >
@@ -287,7 +287,7 @@
             <!-- <p>{{password}}</p> -->
           </div>
         </div>
-        <div class="row">          
+        <div class="row">
           <div class="input-field col s12 m12 l12  login-text">
               <input type="checkbox" id="remember-me" />
               <label for="remember-me">Remember me</label>
@@ -304,7 +304,7 @@
           </div>
           <!-- <div class="input-field col s6 m6 l6">
               <p class="margin right-align medium-small"><a href="page-forgot-password.html">Forgot password ?</a></p>
-          </div>    -->       
+          </div>    -->
         </div>
 
           </div>
@@ -326,14 +326,14 @@
             <input id="nom" type="text" [(ngModel)]="user.nom">
             <label for="nom" class="center-align">Nom</label>
             <p>{{user.nom}}</p>
-          </div>          
+          </div>
         </div>
         <div class="center row margin">
           <div class="input-field col s12">
             <i class="mdi-social-person-outline prefix"></i>
             <input id="prenom" type="text" [(ngModel)]="user.prenom">
             <label for="Prenom" class="center-align">Prenom</label>
-            
+
           </div>
         </div>
          <div class="center row margin">
@@ -408,7 +408,7 @@
             <p>{{user.password}}</p>
           </div>
         </div>
-        
+
         <div class="row">
           <div class="input-field col s12">
             <a (click) = "register();" class="btn waves-effect waves-light col s12" >S'inscrire</a>
@@ -417,7 +417,7 @@
             <a class="btn modal-close" >S'inscrire</a>
           </div>
         </div>
-        
+
 
           </div>
         </div>
@@ -445,7 +445,7 @@
     <!-- START FOOTER -->
     <footer class="page-footer">
         <div class="container">
-            
+
         </div>
         <div class="footer-copyright">
             <div class="container">
@@ -461,6 +461,6 @@
     <!-- ================================================
     Scripts
     ================================================ -->
-    
+
     </div>
 
