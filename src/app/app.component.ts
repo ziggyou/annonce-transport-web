@@ -44,11 +44,13 @@ export class AppComponent {
   		.subscribe(
   			data=>this.handleLogin(data)
   			)
+
   }
 
   handleLogin(data){
   	if (data) {
   		this.router.navigate(["annonce/ajouter"])
+      document.getElementById("ajouter").click();
 
   	}else
   	{
@@ -73,8 +75,10 @@ export class AppComponent {
 
   handleInscrip(data){
   	if (data) {
-  		this.router.navigate(["annonce/ajouter"])
-      this.idPoP1='rien'
+  		//this.router.navigate(["annonce/ajouter"])
+      // this.idPoP1='rien'
+      document.getElementById("fermerInsc").click();
+
   	}else
   	{
 

@@ -26,7 +26,7 @@
                         </li>
                         <li><a href="#" data-activates="chat-out" class="waves-effect waves-block waves-light chat-collapse"><i class="mdi-communication-chat"></i></a>
                         </li>
-                        <li><a href="#modal2" class="waves-effect waves-block waves-light modal-trigger"><i class="mdi-action-account-circle"></i></a>
+                        <li><a id="connecter" href="#modal2" class="waves-effect waves-block waves-light modal-trigger"><i class="mdi-action-account-circle"></i></a>
                         </li>
                         <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a>
                         </li>
@@ -295,12 +295,14 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <a (click) = "login();" class="btn waves-effect waves-light col s12">Login</a>
+            <a  (click) = "login();" class="btn waves-effect waves-light col s12">Login</a>
+            
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6 m6 l6">
             <p class="margin medium-small"><a href="#modal3" class="cyan-text modal-trigger">S'inscrire maintenant!</a></p>
+            <a id="ajouter" href="/annonce/ajouter"></a>
           </div>
           <!-- <div class="input-field col s6 m6 l6">
               <p class="margin right-align medium-small"><a href="page-forgot-password.html">Forgot password ?</a></p>
@@ -413,8 +415,8 @@
           <div class="input-field col s12">
             <a (click) = "register();" class="btn waves-effect waves-light col s12" >S'inscrire</a>
           </div>
-          <div class="input-field col s12">
-            <a class="btn modal-close" >S'inscrire</a>
+          <div >
+            <a id="fermerInsc" class="modal-close" ></a>
           </div>
         </div>
 
