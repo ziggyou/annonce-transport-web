@@ -12,6 +12,7 @@ import { ToasterService} from 'angular2-toaster';
 })
 export class AppComponent {
   title = 'app';
+  idPoP1 = 'modal3';
 
   user = {
   	username : "" ,
@@ -48,6 +49,7 @@ export class AppComponent {
   handleLogin(data){
   	if (data) {
   		this.router.navigate(["annonce/ajouter"])
+
   	}else
   	{	
   		
@@ -72,6 +74,7 @@ export class AppComponent {
   handleInscrip(data){
   	if (data) {
   		this.router.navigate(["annonce/ajouter"])
+      this.idPoP1='rien'
   	}else
   	{	
   		

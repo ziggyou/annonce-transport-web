@@ -311,7 +311,7 @@
         </div>
     </div>
      <!-- Pop up REGISTRATION -->
-    <div id="modal3" class="modal" >
+    <div id="{{idPoP1}}" class="modal" >
     <div class="col s12 z-depth-4 card-panel">
       <div class="login-form">
         <div class="row">
@@ -411,7 +411,10 @@
         
         <div class="row">
           <div class="input-field col s12">
-            <a (click) = "register();" class="btn waves-effect waves-light col s12">S'inscrire</a>
+            <a (click) = "register();" class="btn waves-effect waves-light col s12" >S'inscrire</a>
+          </div>
+          <div class="input-field col s12">
+            <a class="btn modal-close" >S'inscrire</a>
           </div>
         </div>
         
