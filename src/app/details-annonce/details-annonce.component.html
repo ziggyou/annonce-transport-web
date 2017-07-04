@@ -5,22 +5,6 @@
         <div id="page_content_inner">
 
             <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
-                <div class="uk-width-xLarge-2-10 uk-width-large-3-10">
-                    <div class="md-card hoverable" style="margin-bottom:20px;">
-                        <div class="md-card-toolbar">
-                            <h3 class="md-card-toolbar-heading-text cyan-text">
-                                Photos
-                            </h3>
-                        </div>
-                        <div class="md-card-content">     
-                        </div>
-                        <div class="card-image">
-                                <img src="assets/images/voiture1.jpg">
-                                <span class="card-title">Peugeot 307 </span>
-                        </div>
-                    </div>
-                    <a class="waves-effect waves-light btn cyan right" ><i class="mdi-content-clear left"></i>Signaler</a>
-                </div>
                 <div class="uk-width-xLarge-8-10  uk-width-large-7-10">
                     <div class="md-card hoverable">
                         <div class="md-card-toolbar">
@@ -30,64 +14,96 @@
                         </div>
                         <div class="md-card-content large-padding">
                             <div class="uk-grid uk-grid-divider uk-grid-medium">
-                                <div class="uk-width-large-1-2">
-                                    <div class="uk-grid uk-grid-small">
-                                        <div class="uk-width-large-1-3">
-                                            <span class="uk-text-muted uk-text-small">Product Name</span>
-                                        </div>
-                                        <div class="uk-width-large-2-3">
-                                            <span class="uk-text-large uk-text-middle"><a href="#">Peugeot 307</a></span>
-                                        </div>
-                                    </div>
-                                    <hr class="uk-grid-divider">
-                                    <div class="uk-grid uk-grid-small">
-                                        <div class="uk-width-large-1-3">
-                                            <span class="uk-text-muted uk-text-small">Prix</span>
-                                        </div>
-                                        <div class="uk-width-large-2-3">
-                                            2 500 000 FrCfa
-                                        </div>
-                                    </div>
-                                    <hr class="uk-grid-divider">
-                                    <div class="uk-grid uk-grid-small">
-                                        <div class="uk-width-large-1-3">
-                                            <span class="uk-text-muted uk-text-small">Quantite</span>
-                                        </div>
-                                        <div class="uk-width-large-2-3">
-                                            2
-                                        </div>
-                                    </div>
+                              <div class="uk-width-large-1-2">
+                                <p>
+                                  <span class="uk-text-muted uk-text-small uk-display-block uk-margin-small-bottom">Description</span>
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam necessitatibus suscipit velit voluptatibus! Ab accusamus ad adipisci alias aliquid at atque consectetur, dicta dignissimos, distinctio dolores esse fugiat iste laborum libero magni maiores maxime modi nemo neque, nesciunt nisi nulla optio placeat quas quia quibusdam quis saepe sit ullam!
+                                </p>
+                                <hr class="uk-grid-divider">
+                                <div class="uk-grid uk-grid-small">
+
+                                  <div class="uk-width-large-2-3">
+                                    Vente
+                                  </div>
+                                  <div class="uk-width-large-1-3">
+                                    <span class="uk-text-muted uk-text-small">Categorie Annonce</span>
+                                  </div>
+                                </div>
+                                <hr class="uk-grid-divider">
+
+                              </div>
                                     <hr class="uk-grid-divider uk-hidden-large">
+                              <div class="uk-width-large-1-2">
+                                <div class="uk-grid uk-grid-small">
+                                  <div class="uk-width-large-2-3">
+                                    <span class="uk-text-large uk-text-middle">{{annonce.libelle }}</span>
+                                  </div>
+                                  <div class="uk-width-large-1-3">
+                                    <span class="uk-text-muted uk-text-small">Product Name</span>
+                                  </div>
                                 </div>
-                                <div class="uk-width-large-1-2">
-                                    <p>
-                                        <span class="uk-text-muted uk-text-small uk-display-block uk-margin-small-bottom">Description</span>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam necessitatibus suscipit velit voluptatibus! Ab accusamus ad adipisci alias aliquid at atque consectetur, dicta dignissimos, distinctio dolores esse fugiat iste laborum libero magni maiores maxime modi nemo neque, nesciunt nisi nulla optio placeat quas quia quibusdam quis saepe sit ullam!
-                                    </p>
-                                    <hr class="uk-grid-divider">
-                                    <div class="uk-grid uk-grid-small">
-                                        <div class="uk-width-large-1-3">
-                                            <span class="uk-text-muted uk-text-small">Categorie</span>
-                                        </div>
-                                        <div class="uk-width-large-2-3">
-                                            Vente
-                                        </div>
-                                    </div>
-                                    <hr class="uk-grid-divider">
-                                    <div class="uk-grid uk-grid-small">
-                                        <div class="uk-width-large-1-3">
-                                            <span class="uk-text-muted uk-text-small">Color</span>
-                                        </div>
-                                        <div class="uk-width-large-2-3">
-                                            Blue
-                                        </div>
-                                    </div>
-                                    
+                                <hr class="uk-grid-divider">
+                                <div class="uk-grid uk-grid-small">
+                                  <div class="uk-width-large-2-3">
+                                    2 500 000 FrCfa
+                                  </div>
+                                  <div class="uk-width-large-1-3">
+                                    <span class="uk-text-muted uk-text-small">Prix</span>
+                                  </div>
                                 </div>
+                                <hr class="uk-grid-divider">
+                                <div class="uk-grid uk-grid-small">
+
+                                  <div class="uk-width-large-2-3">
+                                    {{annonce.quantite}}
+                                  </div>
+                                  <div class="uk-width-large-1-3">
+                                    <span class="uk-text-muted uk-text-small">Quantite</span>
+                                  </div>
+                                </div>
+                                <hr class="uk-grid-divider">
+                                <div class="uk-grid uk-grid-small">
+
+                                  <div class="uk-width-large-2-3">
+                                    <span class="uk-text-large uk-text-middle">{{user.prenom}} {{user.nom}}</span>
+                                  </div>
+                                  <div class="uk-width-large-1-3">
+                                    <span class="uk-text-muted uk-text-small">Proprietaire</span>
+                                  </div>
+                                </div>
+                                <hr class="uk-grid-divider">
+                                <div class="uk-grid uk-grid-small">
+
+                                  <div class="uk-width-large-2-3">
+                                    <span class="uk-text-large uk-text-middle">{{user.telephone1 }}  /  {{user.telephone2}}</span>
+                                  </div>
+                                  <div class="uk-width-large-1-3">
+                                    <span class="uk-text-muted uk-text-small">Telephone</span>
+                                  </div>
+                                </div>
+                              </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="uk-width-xLarge-2-10  uk-width-large-3-10">
+                <div class="md-card hoverable" style="margin-bottom:20px;">
+                  <div class="md-card-toolbar">
+                    <h3 class="md-card-toolbar-heading-text cyan-text">
+                      Photos
+                    </h3>
+                  </div>
+                  <div class="md-card-content">
+                  </div>
+                  <div class="card-image">
+                    <img src="assets/images/voiture1.jpg">
+                    <span class="card-title">{{annonce.libelle}}</span>
+                  </div>
+                </div>
+                <a class="waves-effect waves-light btn cyan right" ><i class="mdi-content-clear left"></i>Signaler</a>
+              </div>
+
             </div>
 
         </div>

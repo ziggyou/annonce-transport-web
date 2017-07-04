@@ -24,4 +24,9 @@ export class ConsulterAnnonceComponent implements OnInit {
     this.annonces = data;
   }
 
+  annonceSelected(annonce)
+  {
+    localStorage.setItem("annonceId", annonce.id);
+  }
+
 }

@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import {FormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {ToasterModule} from 'angular2-toaster';
+import { ListeAnnonceComponent } from './liste-annonce/liste-annonce.component';
+import { FavorisAnnonceComponent } from './favoris-annonce/favoris-annonce.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {ToasterModule} from 'angular2-toaster';
     ConsulterAnnonceComponent,
     AjouterAnnonceComponent,
     DetailsAnnonceComponent,
-    LoginComponent
+    LoginComponent,
+    ListeAnnonceComponent,
+    FavorisAnnonceComponent
   ],
   imports: [
     BrowserModule,
