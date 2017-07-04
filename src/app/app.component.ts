@@ -12,6 +12,7 @@ import { ToasterService} from 'angular2-toaster';
 })
 export class AppComponent {
   title = 'app';
+  idPoP1 = 'modal3';
 
   user = {
   	username : "" ,
@@ -43,11 +44,14 @@ export class AppComponent {
   		.subscribe(
   			data=>this.handleLogin(data)
   			)
+
   }
 
   handleLogin(data){
   	if (data) {
   		this.router.navigate(["annonce/ajouter"])
+      document.getElementById("ajouter").click();
+
   	}else
   	{
 
@@ -71,7 +75,10 @@ export class AppComponent {
 
   handleInscrip(data){
   	if (data) {
-  		this.router.navigate(["annonce/ajouter"])
+  		//this.router.navigate(["annonce/ajouter"])
+      // this.idPoP1='rien'
+      document.getElementById("fermerInsc").click();
+
   	}else
   	{
 
