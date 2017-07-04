@@ -17,7 +17,7 @@
                               <div class="uk-width-large-1-2">
                                 <p>
                                   <span class="uk-text-muted uk-text-small uk-display-block uk-margin-small-bottom">Description</span>
-                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam necessitatibus suscipit velit voluptatibus! Ab accusamus ad adipisci alias aliquid at atque consectetur, dicta dignissimos, distinctio dolores esse fugiat iste laborum libero magni maiores maxime modi nemo neque, nesciunt nisi nulla optio placeat quas quia quibusdam quis saepe sit ullam!
+                                  {{annonce.description }}
                                 </p>
                                 <hr class="uk-grid-divider">
                                 <div class="uk-grid uk-grid-small">
@@ -45,7 +45,7 @@
                                 <hr class="uk-grid-divider">
                                 <div class="uk-grid uk-grid-small">
                                   <div class="uk-width-large-2-3">
-                                    2 500 000 FrCfa
+                                    {{annonce.prix }}
                                   </div>
                                   <div class="uk-width-large-1-3">
                                     <span class="uk-text-muted uk-text-small">Prix</span>
@@ -101,7 +101,8 @@
                     <span class="card-title">{{annonce.libelle}}</span>
                   </div>
                 </div>
-                <a class="waves-effect waves-light btn cyan right" ><i class="mdi-content-clear left"></i>Signaler</a>
+                <a class="waves-effect waves-light btn cyan right" style="margin-right:25px;"><i class="mdi-navigation-cancel left"></i>Signaler</a>
+                <a class="waves-effect waves-light btn cyan right" style="margin-right:10px;"><i class="mdi-navigation-cancel left"></i>favoris</a>
               </div>
 
             </div>

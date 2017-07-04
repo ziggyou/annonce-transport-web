@@ -11,12 +11,12 @@
                         <div class="card hoverable z-depth-1" style="margin-bottom: 25px;">
                           <div class="card-image waves-effect waves-block waves-light">
                             <a class="btn-floating btn-large btn-price waves-effect waves-light  red ">{{annonce.quantite}}Cfa</a>
-                            <img class="activator" src="assets/images/voiture1.jpg" alt="office">
+                            <img class="activator" src="{{annonce.photo}}" alt="office">
                           </div>
                           <ul class="card-action-buttons ">
                                 <li><a (click)="annonceSelected(annonce);" href="annonce/details"  class="btn-floating waves-effect waves-light red accent-2"><i class="mdi-image-remove-red-eye"></i></a>
                                 </li>
-                                <li><a href="#modal1" class="btn-floating waves-effect waves-light green accent-4 modal-trigger"><i class="mdi-image-iso"></i></a>
+                                <li><a  class="btn-floating waves-effect waves-light green accent-4 "><i class="mdi-action-favorite"></i></a>
                                 </li>
 
                                 <li><a class="btn-floating waves-effect waves-light light-blue"><i class="mdi-action-info activator"></i></a>
