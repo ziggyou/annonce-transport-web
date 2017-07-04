@@ -3,7 +3,7 @@
             <h1 id="product_edit_name">Ajouter une annonce </h1>
         </div>
         <div id="page_content_inner">
-            <form action="" class="uk-form-stacked" id="product_edit_form">
+            <div action="" class="uk-form-stacked" id="product_edit_form"> <!-- <form> -->
                 <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
 
                     <div class="uk-width-xLarge-8-10  uk-width-large-7-10">
@@ -19,53 +19,60 @@
 
                                     <div class="uk-grid uk-grid-small">
                                       <div class="uk-width-large-2-3">
-                                      <textarea id="textarea" row="4" class="materialize-textarea"></textarea>
+                                      <textarea id="textarea" row="4" class="materialize-textarea" [(ngModel)]="annonce.description"></textarea>
                                       </div>
                                       <div class="uk-width-large-1-3">
                                       <label for="textarea" class="">Description</label>
                                       </div>
                                     </div>
+                                    <p>{{annonce.description}}</p>
                                     <br> <br>
                                       <div class="uk-grid uk-grid-small" style="margin-bottom: 40px;">
                                         <div class="uk-width-large-2-3">
-                                          <select  multiple>
-                                            <option value="Vente" selected>Vente</option>
-                                            <option value="Location" >Location</option>
-                                            <option value="Transport_en_commun" >Transport en commun</option>
+                                          <select multiple  [(ngModel)]="annonce.typeannonceId">
+                                            
+                                            <option *ngFor="let c of categories" [ngValue]="c">{{c.libelle}}</option>
+                                            
 
                                           </select>
+                                          <p>{{annonce.typeannonceId}}</p>
                                         </div>
                                         <div class="uk-width-large-1-3">
                                           <label>Categorie Annonce</label>
                                         </div>
+                                        
                                       </div>
                                     <br>
+                                    
                                   </div>
 
                                     <div class="uk-width-large-1-2">
                                       <div class="uk-grid uk-grid-small" style="margin-bottom: 40px;">
                                         <div class="uk-width-large-2-3">
-                                            <input type="text" class="md-input"/>
+                                            <input type="text" class="md-input" [(ngModel)]="annonce.libelle"/>
                                         </div>
                                         <div class="uk-width-large-1-3">
                                             <label >Product Name</label>
                                         </div>
+                                        <p>{{annonce.libelle}}</p>
                                       </div>
                                       <div class="uk-grid uk-grid-small" style="margin-bottom: 40px;">
                                         <div class="uk-width-large-2-3">
-                                          <input type="number" class="md-input"/>
+                                          <input type="number" class="md-input" [(ngModel)]="annonce.prix"/>
                                         </div>
                                         <div class="uk-width-large-1-3">
                                           <label >Prix</label>
                                         </div>
+                                        <p>{{annonce.prix}}</p>
                                       </div>
                                       <div class="uk-grid uk-grid-small" style="margin-bottom: 40px;">
                                         <div class="uk-width-large-2-3">
-                                          <input type="number" class="md-input"/>
+                                          <input type="number" class="md-input" [(ngModel)]="annonce.quantite"/>
                                         </div>
                                         <div class="uk-width-large-1-3">
                                           <label >        Quantite</label>
                                         </div>
+                                        <p>{{annonce.quantite}}</p>
                                       </div>
 
                                     </div>
@@ -112,14 +119,14 @@
                     </div>
                   </div>
                 </div>
-            </form>
+            </div> <!-- </form> -->
 
         </div>
     </div>
 
 
     <div class="md-fab-wrapper">
-        <a class="md-fab md-fab-primary cyan" href="#" id="product_edit_submit">
+        <a (click) = "ajouterAnnonce();" class="md-fab md-fab-primary cyan"  id="product_edit_submit">
             <i class="mdi-content-save"></i>
         </a>
     </div>
