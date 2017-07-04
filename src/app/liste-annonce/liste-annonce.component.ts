@@ -15,12 +15,12 @@ export class ListeAnnonceComponent implements OnInit {
   ngOnInit() {
     this.listeAnnonceService.getAnnonces(localStorage.getItem("userId"))
       .subscribe(
-        data => this.handleAnnonces(data)
+        data => this.handleListes(data)
       );
   }
 
-  handleAnnonces(data){
-    console.log(data)
+  handleListes(data){
+    console.log("getAnnonces of user",data)
     this.annonces = data;
   }
 
